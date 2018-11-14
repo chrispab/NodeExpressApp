@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+
+  form(action="http://127.0.0.1:3000/", method="post")  
+    div
+      fieldset
+          label(for="LotteryRadio") Lottery:
+          input(type="radio", name="LotteryRadio" value="Lottery" checked)
+          br
+          label(for="Thunderball") Thunderball:
+          input(type="radio", name="LotteryRadio" value="Thunderball") 
+          br
+          label(for="Euromillions") Euromillions:
+          input(type="radio", name="LotteryRadio" value="Euromillions") 
+          br
+          button(type="submit") request numbers
+        
+    //input#(type="radio", name="")
+
+
+
+
+
+  h2= drawLetter
+  //p Welcome to #{title}
+  h3 Numbers : #{mainBallsStr}
+  //- a #{backLink}
+  //- p break
+  //- p  
+  a(href="http://127.0.0.1:3000/") Go Back

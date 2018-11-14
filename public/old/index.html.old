@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Game selection</title>
+</head>
+
+<body>
+    <div id="contact">
+        <h1>Select</h1>
+        <form action="http://127.0.0.1:3000/" method="post">
+            <fieldset>
+                <label for="gametype">Game Type:</label><br>
+                <!-- <input type="radio" id="name" name="name" placeholder="Enter your full name" /> -->
+                <input type="radio" name="gametype" value="Lottery" checked>Lottery<br>
+                <input type="radio" name="gametype" value="Thunderball">Thunderball<br>
+                <input type="radio" name="gametype" value="Euromillions">Euromillions<br>
+                <!-- <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email address" />
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="What's on your mind?"></textarea> -->
+
+                <input type="submit" value="Pick" />
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
