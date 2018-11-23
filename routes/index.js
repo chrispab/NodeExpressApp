@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+//
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
     //res.render('index', { title: getNumbers('L', res) });
@@ -36,6 +38,10 @@ function hasDuplicates(array) {
     }
     return false;
 }
+
+// 
+r = 1.6180339887;
+num1 = r - 1;
 
 
 function getNumbers(drawType) {
@@ -76,7 +82,11 @@ function getNumbers(drawType) {
     do {
         //res.write('<br>');
         for (i = 0; i < numMainBalls; i++) {
-            num = Math.round(Math.random() * (mainBallsRange - 1) + 1);
+            //for (i=0; )
+            //num = Math.round(Math.random() * (mainBallsRange - 1) + 1);
+            num = Math.round(Math.random() * r * (mainBallsRange - 1) + 1) - 16;
+            //Math.random() * (max - min) + min;
+
             mainBalls[i] = num;
             console.log(num);
             //res.write(num.toString() + '<br>'); //write a response to the client
@@ -90,7 +100,7 @@ function getNumbers(drawType) {
         //res.write('<br>') //write a response to the client
         console.log("");
         for (i = 0; i < numExtraBalls; i++) {
-            num = Math.round(Math.random() * (extraBallsRange - 1) + 1);
+            num = Math.round(Math.random() * r * (extraBallsRange - 1) + 1) - 16;
             extraBalls[i] = num;
             console.log(num);
             //res.write(num.toString() + '<br>'); //write a response to the client
