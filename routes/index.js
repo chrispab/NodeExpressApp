@@ -80,11 +80,13 @@ function getNumbers(drawType) {
     }
 
     do {
+        remover = 34;
+        remover2 = 16;
         //res.write('<br>');
         for (i = 0; i < numMainBalls; i++) {
             //for (i=0; )
-            //num = Math.round(Math.random() * (mainBallsRange - 1) + 1);
-            num = Math.round(Math.random() * r * (mainBallsRange - 1) + 1) - 16;
+            num = Math.round(Math.random() * (mainBallsRange - 1) + 1);
+            //num = Math.round(Math.random() * r * (mainBallsRange - 1) + 1) - remover;
             //Math.random() * (max - min) + min;
 
             mainBalls[i] = num;
@@ -100,7 +102,9 @@ function getNumbers(drawType) {
         //res.write('<br>') //write a response to the client
         console.log("");
         for (i = 0; i < numExtraBalls; i++) {
-            num = Math.round(Math.random() * r * (extraBallsRange - 1) + 1) - 16;
+            num = Math.round(Math.random() * (extraBallsRange - 1) + 1);
+
+            //num = Math.round(Math.random() * r * (extraBallsRange - 1) + 1) - remover2;
             extraBalls[i] = num;
             console.log(num);
             //res.write(num.toString() + '<br>'); //write a response to the client
