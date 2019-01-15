@@ -7,13 +7,23 @@ block content
     div
       fieldset
           label(for="LotteryRadio") Lottery:
-          input(type="radio", name="LotteryRadio" value="Lottery" checked)
+          if drawLetter == "Lottery"
+            input(type="radio", name="LotteryRadio" value="Lottery" checked)
+          else
+            input(type="radio", name="LotteryRadio" value="Lottery" )
           br
           label(for="Thunderball") Thunderball:
-          input(type="radio", name="LotteryRadio" value="Thunderball") 
+          if drawLetter == "Thunderball"
+            input(type="radio", name="LotteryRadio" value="Thunderball" checked)
+          else
+            input(type="radio", name="LotteryRadio" value="Thunderball" ) 
           br
           label(for="Euromillions") Euromillions:
-          input(type="radio", name="LotteryRadio" value="Euromillions") 
+          if drawLetter == "Euromillions"
+            input(type="radio", name="LotteryRadio" value="Euromillions" checked)
+          else
+            input(type="radio", name="LotteryRadio" value="Euromillions" )
+           
           br
           button(type="submit") request numbers
         

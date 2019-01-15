@@ -6,7 +6,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
     //res.render('index', { title: getNumbers('L', res) });
-    res.render('index', { title: 'hi' });
+    res.render('index', { title: 'hi - starting' });
     //res.sendFile('/home/chris/Projects/git/myExpressApp/public/old/index.html');
 
 });
@@ -16,6 +16,7 @@ router.post('/', function(req, res) {
 
     //res.send('POST request to the homepage');
     var mytype = req.body.LotteryRadio;
+    var currentSelection = req.body.drawType;
     res.render('index', {
         drawLetter: mytype,
         title: "Picker",
