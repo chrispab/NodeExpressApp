@@ -7,8 +7,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     //res.render('index', { title: getNumbers('L', res) });
     res.render('index', {
-        title: 'hi - starting',
-        drawLetter: 'Lottery'
+        drawLetter: 'Lottery',
+        title: 'hiya - starting'
+
     });
     //res.sendFile('/home/chris/Projects/git/myExpressApp/public/old/index.html');
 

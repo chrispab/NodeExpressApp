@@ -5,12 +5,13 @@ block content
     .card-body
       form(action="http://127.0.0.1:3000/", method="post")  
           h3=title
+          h3=drawLetter
 
           .form-group
 
             .form-check
               label.form-check-label(for='radio1')
-                if (drawLetter == NULL)
+                //- if (drawLetter == NULL)
                   input#radio1.form-check-input(type="radio", name="LotteryRadio" value="Lottery" checked)
                 if (drawLetter == "Lottery")
                   input#radio1.form-check-input(type="radio", name="LotteryRadio" value="Lottery" checked)
