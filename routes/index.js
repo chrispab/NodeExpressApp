@@ -43,6 +43,7 @@ function hasDuplicates(array) {
 // 
 seed = 1.6180339887;
 num1 = seed - 1;
+seedMuliplier = 10000;
 
 
 function getNumbers(drawType) {
@@ -82,8 +83,8 @@ function getNumbers(drawType) {
 
 
     //loop for random num of times bet 1 and 100
-    loops1 = Math.round(Math.random() * (seed * 1000 - 1) + 1);
-    loops2 = Math.round(Math.random() * (seed * 1000 - 1) + 1);
+    loops1 = Math.round(Math.random() * (seed * seedMuliplier - 1) + 1);
+    loops2 = Math.round(Math.random() * (seed * seedMuliplier - 1) + 1);
 
     for (let index = 0; index < loops1; index++) {
         do {
