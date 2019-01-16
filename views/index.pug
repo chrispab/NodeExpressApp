@@ -1,42 +1,39 @@
 extends layout
 
 block content
-  h1= title
+  .card
+    .card-body
+      form(action="http://127.0.0.1:3000/", method="post")  
+          h3=title
 
-  form(action="http://127.0.0.1:3000/", method="post")  
-    div
-      fieldset
-          label(for="LotteryRadio") Lottery:
-          if drawLetter == "Lottery"
-            input(type="radio", name="LotteryRadio" value="Lottery" checked)
-          else
-            input(type="radio", name="LotteryRadio" value="Lottery" )
-          br
-          label(for="Thunderball") Thunderball:
-          if drawLetter == "Thunderball"
-            input(type="radio", name="LotteryRadio" value="Thunderball" checked)
-          else
-            input(type="radio", name="LotteryRadio" value="Thunderball" ) 
-          br
-          label(for="Euromillions") Euromillions:
-          if drawLetter == "Euromillions"
-            input(type="radio", name="LotteryRadio" value="Euromillions" checked)
-          else
-            input(type="radio", name="LotteryRadio" value="Euromillions" )
-           
-          br
-          button(type="submit") request numbers
-        
-    //input#(type="radio", name="")
+          .form-group
 
+            .form-check
+              label.form-check-label(for='radio1')
+                if (drawLetter == NULL)
+                  input#radio1.form-check-input(type="radio", name="LotteryRadio" value="Lottery" checked)
+                if (drawLetter == "Lottery")
+                  input#radio1.form-check-input(type="radio", name="LotteryRadio" value="Lottery" checked)
+                else
+                  input#radio1.form-check-input(type="radio", name="LotteryRadio" value="Lottery" )
+                | Lottery                
+            .form-check
+              label.form-check-label(for='radio2')
+                if drawLetter == "Thunderball"
+                  input#radio2.form-check-input(type="radio", name="LotteryRadio" value="Thunderball" checked)
+                else
+                  input#radio2.form-check-input(type="radio", name="LotteryRadio" value="Thunderball" ) 
+                | Thunderball
+            .form-check
+              label.form-check-label(for='radio3')
+                if drawLetter == "Euromillions"
+                  input#radio3.form-check-input(type="radio", name="LotteryRadio" value="Euromillions" checked)
+                else
+                  input#radio3.form-check-input(type="radio", name="LotteryRadio" value="Euromillions" )
+                | Euromillions
+            button.btn.btn-primary(type="submit") Get Numbers
+                
+            h4 #{drawLetter} Numbers : #{mainBallsStr}
 
+            a.btn.btn-info(href="http://127.0.0.1:3000/" role='button') Go Back
 
-
-
-  h2= drawLetter
-  //p Welcome to #{title}
-  h3 Numbers : #{mainBallsStr}
-  //- a #{backLink}
-  //- p break
-  //- p  
-  a(href="http://127.0.0.1:3000/") Go Back
