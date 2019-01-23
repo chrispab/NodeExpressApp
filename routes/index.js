@@ -22,11 +22,13 @@ router.post('/', function(req, res) {
     var mytype = req.body.LotteryRadio;
     // if 
     var currentSelection = req.body.drawType;
+    var mySlider = req.body.sliderVal;
     res.render('index', {
         drawLetter: mytype,
         title: "Picker",
-        mainBallsStr: getNumbers(mytype),
-        backLink: "http://127.0.0.1:3000/"
+        mainBallsStr: getNumbers(mytype, mySlider),
+        backLink: "http://127.0.0.1:3000/",
+        slider: mySlider
     });
 })
 
@@ -51,7 +53,9 @@ num1 = seed - 1;
 seedMuliplier = 10000;
 
 
-function getNumbers(drawType) {
+function getNumbers(drawType, sliderVal) {
+
+    seedMultiplier = seedMuliplier * (sliderVal / 99);
     console.log(drawType);
     var numMainBalls;
     var mainBallsRange;

@@ -32,6 +32,12 @@ block content
                 else
                   input#radio3.form-check-input(type="radio", name="LotteryRadio" value="Euromillions" )
                 | Euromillions
+
+            label(for='customRange') Custom range
+            input#customRange.custom-range(type='range' name='sliderVal')
+            //- label(for='defaultRange') Default range
+            //- input#defaultRange(type='range' name='points2')   
+             
             button.btn.btn-primary(type="submit") Get Numbers
                 
             h4 #{drawLetter} Numbers : #{mainBallsStr}
