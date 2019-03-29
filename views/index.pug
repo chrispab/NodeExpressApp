@@ -32,6 +32,13 @@ block content
                 else
                   input#radio3.form-check-input(type="radio", name="LotteryRadio" value="Euromillions" )
                 | Euromillions
+            .form-check
+              label.form-check-label(for='radio4')
+                if drawLetter == "Life"
+                  input#radio3.form-check-input(type="radio", name="LotteryRadio" value="Life" checked)
+                else
+                  input#radio3.form-check-input(type="radio", name="LotteryRadio" value="Life" )
+                | Life
 
             label(for='customRange') Custom range
             input#customRange.custom-range(type='range' name='sliderVal')

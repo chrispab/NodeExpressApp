@@ -83,12 +83,21 @@ function getNumbers(drawType, sliderVal) {
     }
     if (drawType == "Thunderball") {
         numMainBalls = 5;
+        mainBallsRange = 47;
+        numExtraBalls = 1;
+        extraBallsRange = 10;
+        extraBalls = [numExtraBalls];
+        mainBalls = [numMainBalls];
+    }
+    if (drawType == "Life") {
+        numMainBalls = 5;
         mainBallsRange = 39;
         numExtraBalls = 1;
         extraBallsRange = 14;
         extraBalls = [numExtraBalls];
         mainBalls = [numMainBalls];
     }
+
 
 
     //loop for random num of times bet 1 and 100
