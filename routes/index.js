@@ -83,9 +83,9 @@ function getNumbers(drawType, sliderVal) {
     }
     if (drawType == "Thunderball") {
         numMainBalls = 5;
-        mainBallsRange = 47;
+        mainBallsRange = 39;
         numExtraBalls = 1;
-        extraBallsRange = 10;
+        extraBallsRange = 14;
         extraBalls = [numExtraBalls];
         mainBalls = [numMainBalls];
     }
